@@ -6,7 +6,8 @@
 }
 
 @mixin socialMediaGrid($qty) {
-    width: 1px + ($qty * ($sm-margin + $sm-size));
+    // Using MATH Operations in SASS Code
+    width: 1px + ($qty * ($social-margin + $social-size));
 }
 
 @mixin headerProps ($color: $white-color , $weight: 0, $size: 0, $line-height:0, $margin-bottom: 0) {

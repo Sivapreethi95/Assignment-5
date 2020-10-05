@@ -25,16 +25,16 @@ footer {
 }
 
 .social-media {
-	margin: 0 auto;
+    margin: 0 auto;
     @include socialMediaGrid(4);
     div {
         float: left;
-        margin-right: $sm-margin;
+        margin-right: $social-margin;
     }
     a {
         display: block;
-        width: $sm-size;
-        height: $sm-size;
+        width: $social-size;
+        height: $social-size;
         text-indent: -9999px;
     }
     div.one {
@@ -42,11 +42,9 @@ footer {
     }
     div.two {
         @include backgroundImage($socialmedia-image, $positions: -38px 0);
-
     }
     div.three {
         @include backgroundImage($socialmedia-image, $positions: -76px 0);
-
     }
     div.four {
         @include backgroundImage($socialmedia-image, $positions: -114px 0);
