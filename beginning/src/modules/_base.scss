@@ -1,0 +1,117 @@
+body {
+    font: {
+        family: $body-font;
+        size:1em;
+    }
+    line-height:2em;
+    @include backgroundImage($background-image, $white-color, repeat-x);
+    margin:0;
+}
+
+main {
+    width: 940px;
+    @include screensize($screen-lg) {width: 768px;}
+    @include screensize($screen-md) {width: 460px;}
+    @include screensize($screen-sm) {width: 300px;}
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+figure {
+    @include setDimensions(400px, 190px);
+    @include backgroundImage($logo-image, $repeat: no-repeat, $positions: 0 50px);
+	float: left;
+	display: block;
+    margin: 0;
+    @include screensize($screen-lg) {
+		width: inherit;
+		height: 140px;
+		float: none;
+		background-position: center;
+	}
+    @include screensize($screen-sm) {
+		background-size: contain;
+		height: 100px;
+	}
+}
+
+
+header {
+    @include setDimensions(inherit);
+	clear: both;
+	text-align: center;
+    padding-top: 40px;
+     img {
+        max-width: 100%;
+        height: auto;
+        @include screensize($screen-md) {
+            margin-bottom: 100px;
+        }
+        @include screensize($screen-sm) {
+            margin-bottom: 80px;
+        }
+     }
+     h1 {
+         @include headerProps($orange-color, 100, 4em, 0);
+         @include screensize($screen-lg) {
+            font-size: 3em;
+         }
+         @include screensize($screen-md) {
+            font-size: 2em;
+         }
+         @include screensize($screen-sm) {
+            &:first-child {
+                font-size: 1.4em;
+                margin-bottom: 20px;
+            }
+        }
+     }
+     h2 {
+        @include headerProps($white-color, 900, 2.5em, 0, 70px);
+        @include screensize($screen-lg) {
+            font-size: 1.5em;
+        }
+        @include screensize($screen-md) {
+            font-size: 1em;
+        }
+        @include screensize($screen-sm) {
+            font-size: 1.4em;
+        }
+    }  
+    h3 {
+        @include headerProps($grey-color, 400, 2em, 0, 50px);
+        @include screensize($screen-md) {
+            font-size: 1.5em;
+        }
+        @include screensize($screen-sm) {
+            color: $white-color;
+            font-size: 1em;
+        }
+    }
+}
+#headline {
+    @include setDimensions(100%, 130px);
+	background: $darkorange-color;
+	text-align: center;
+	margin: 0 auto;
+        h1 {
+	        color: $white-color;
+	        font-size: 2.5em;
+	        font-weight: 100;
+            padding-top: 50px;
+            @include screensize($screen-md) {
+                font-size: 2em;
+                padding-top: 50px;
+            }
+            @include screensize($screen-sm) {
+                font-size: 1.5em;
+                padding-top: 30px;
+            }
+        }
+}
+
+@include screensize($screen-sm) {
+    select {
+		width: 95%;
+	}
+}

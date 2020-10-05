@@ -1,0 +1,42 @@
+nav {
+    @include setDimensions(540px, 190px);
+	float: left;
+    text-align: right;
+    @include screensize($screen-lg) {
+        width: inherit;
+		height: 50px;
+		float: none;
+        text-align: center;
+    }
+    @include screensize($screen-sm) {
+        margin-bottom: 40px !important;
+    }
+    ul {
+        list-style-type: none;
+        margin-top: 95px;
+        @include screensize($screen-lg) {
+            margin-top: 0;  
+        }
+        li {
+            display: inline;
+            font-size: 0.8em;
+            margin-right: 10px;
+            @include screensize($screen-lg) {
+                font-size: 1em;
+                margin: 0 10px;
+            }
+            @include screensize($screen-md) {
+                font-size: 0.8em;
+                margin: 0 5px;
+            }
+            a {
+                color: $orange-color;
+                text-decoration: none;
+                letter-spacing: -0.01em;
+                &:hover {
+                    color: $white-color;
+                }
+            }  
+        }
+    }
+}

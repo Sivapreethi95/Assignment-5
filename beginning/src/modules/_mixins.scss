@@ -1,0 +1,38 @@
+@mixin backgroundImage($imageUrl, $bgColor: transparent, $repeat: repeat, $positions: 0% 0%) {
+    background-image: url($imageUrl);
+    background-color: $bgColor;
+    background-repeat: $repeat;
+    background-position: $positions;
+}
+
+@mixin socialMediaGrid($qty) {
+    width: 1px + ($qty * ($sm-margin + $sm-size));
+}
+
+@mixin headerProps ($color: $white-color , $weight: 0, $size: 0, $line-height:0, $margin-bottom: 0) {
+    color: $color;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $line-height;
+    @if $margin-bottom != 0{
+        margin-bottom: $margin-bottom;   
+    }
+}
+
+@mixin contentAlign ($width: 460px, $float: left){
+    width: $width;
+    float: $float;
+}
+
+@mixin setDimensions ($width: 0, $height: 0){
+    width: $width;
+    @if $height!=0{
+        height: $height;
+    }
+}
+
+@mixin screensize($max) { 
+    @media screen and (max-width: $max) { 
+      @content 
+    } 
+}

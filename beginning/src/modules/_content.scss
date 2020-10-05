@@ -1,0 +1,55 @@
+
+#content {
+    @include setDimensions(940px);
+    margin: 20px auto;
+    @include screensize($screen-lg) {
+        width: inherit;
+    }
+    h3 {
+        color: $grey-color;
+        font-size: 2em;
+        font-weight: 400;
+        @include screensize($screen-sm) {
+            font-size:1.6em;
+        }
+    }
+    #products {
+        @include contentAlign();
+        img {
+            float: left;
+            margin-right: 20px;
+        }
+        article {
+            margin-bottom: 40px;
+            @include screensize($screen-sm) {
+                img {
+                    display: none;
+                }
+            }
+        }
+        h4 {
+            line-height: 1em;
+        }
+        @include screensize($screen-lg) {
+            width: 46%;
+            margin: 0 2%;
+        }
+        @include screensize($screen-md) {
+            width: 96%;
+		    margin: 0 2%;
+            float: none;
+        }
+    }
+    #testimonials {
+        @include contentAlign($float: right);
+        @include screensize($screen-lg) {
+            width: 46%;
+            margin: 0 2%;
+        }
+        @include screensize($screen-md) {
+            width: 96%;
+		    margin: 0 2%;
+            float: none;
+        }
+    }
+}
